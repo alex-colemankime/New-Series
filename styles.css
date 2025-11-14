@@ -1,0 +1,245 @@
+:root {
+  --wc-cream: #f6f0e3;
+  --wc-text: #2e2a24;
+  --wc-muted: #6b5a46;
+  --wc-accent-teal: #629495;
+  --wc-accent-gold: #e39229;
+  --wc-accent-rust: #c24732;
+  --wc-accent-gold-alt: #dd9034;
+  --wc-accent-teal-alt: #5a9593;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  background: var(--wc-cream);
+  font-family: "Figtree", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: 18px; /* small global bump */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wc-page {
+  position: relative;
+  width: min(820px, 100%);
+  aspect-ratio: 2 / 3;
+  background-image: url("https://backend.xpn.org/app/uploads/2025/11/World-Cafe-Logos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--wc-text);
+}
+
+.wc-content {
+  position: absolute;
+  top: 8.5%;
+  left: 11%;
+  right: 9%;
+  bottom: 9.5%;
+  padding: 0.05rem 2.1rem 0.4rem 1.7rem;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.wc-title-block {
+  max-width: 70%;
+}
+
+.wc-title {
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.15rem;
+}
+
+.wc-kicker {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--wc-accent-teal);
+  margin: 0 0 0.08rem;
+}
+
+.wc-intro {
+  font-size: 0.98rem;
+  line-height: 1.50;
+  max-width: 92%;
+}
+
+.wc-intro p {
+  margin: 0 0 0.5rem;
+}
+
+.wc-intro-lede {
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.9rem;
+}
+
+.wc-intro-you {
+  color: var(--wc-accent-gold);
+  letter-spacing: 0.08em;
+}
+
+.wc-intro-question {
+  font-size: 1.18rem;
+  font-style: italic;
+  color: var(--wc-accent-rust);
+  font-weight: 600;
+}
+
+.wc-highlight {
+  color: var(--wc-accent-teal);
+  font-weight: 600;
+}
+
+/* inline "why it matters…" list – alternating colors */
+.wc-why {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.wc-why-1 { color: var(--wc-accent-gold); }
+.wc-why-2 { color: var(--wc-accent-teal); }
+.wc-why-3 { color: var(--wc-accent-rust); }
+.wc-why-4 { color: var(--wc-accent-gold); }
+.wc-why-5 { color: var(--wc-accent-teal); }
+
+.wc-about-heading {
+  font-size: 0.91rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--wc-accent-gold);
+  margin: 0 0 0.3rem;
+  border-bottom: 1px solid #e09037;
+  padding-bottom: 0.2rem;
+}
+
+.wc-about-body {
+  font-size: 0.88rem;
+  line-height: 1.35;
+  column-count: 2;
+  column-gap: 2.1rem;
+}
+
+.wc-about-body p {
+  margin: 0 0 0.55rem;
+  break-inside: avoid;
+}
+
+/* Artist / notable names color rotation */
+.wc-artist-name {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.wc-artist-name:nth-of-type(3n + 1) {
+  color: var(--wc-accent-gold);
+}
+
+.wc-artist-name:nth-of-type(3n + 2) {
+  color: var(--wc-accent-teal);
+}
+
+.wc-artist-name:nth-of-type(3n + 3) {
+  color: var(--wc-accent-rust);
+}
+
+/* Specific host color treatments */
+.wc-name-rust {
+  color: var(--wc-accent-rust);
+  font-weight: 700;
+}
+
+.wc-name-gold-alt {
+  color: var(--wc-accent-gold-alt);
+  font-weight: 700;
+}
+
+.wc-name-teal-alt {
+  color: var(--wc-accent-teal-alt);
+  font-weight: 700;
+}
+
+/* World Cafe red treatment */
+.wc-worldcafe {
+  color: var(--wc-accent-rust);
+  font-weight: 700;
+}
+
+/* Logo row: NPR then WXPN */
+.wc-logo-row {
+  margin-top: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.wc-npr-logo {
+  max-width: 110px;
+  height: auto;
+  display: block;
+}
+
+.wc-xpn-logo {
+  max-width: 125px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem;
+  }
+
+  .wc-page {
+    width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .wc-content {
+    position: static;
+    padding: 1.5rem 1.25rem 1.75rem;
+  }
+
+  .wc-title-block {
+    max-width: 100%;
+  }
+
+  .wc-intro {
+    max-width: 100%;
+  }
+
+  .wc-about-body {
+    column-count: 1;
+    font-size: 0.9rem;
+  }
+}
+
+@media print {
+  @page {
+    size: 8.5in 11in;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--wc-cream);
+  }
+
+  .wc-page {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+  }
+}
